@@ -5,13 +5,18 @@
   text-decoration: none;
   padding-block: 15px;
   padding-inline: 10px;
+  cursor: pointer;
 
   font-size: 1.25rem;
 
   border-radius: 1.75rem;
 }
 
-.button:focus-visible,
-.button:hover {
+.button[disabled] {
+  background-color: lightgray;
+}
+
+.button:not([disabled]):focus-visible,
+.button:not([disabled]):hover {
   background-color: #05BDE5;
 }
