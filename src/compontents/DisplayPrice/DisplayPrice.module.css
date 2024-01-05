@@ -1,0 +1,21 @@
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPrice {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.discounted {
+  color: red;
+}
+
+.before {
+  font-size: 0.75rem;
+}
+
+.before > span {
+  text-decoration: line-through;
+}
