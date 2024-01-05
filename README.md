@@ -1,6 +1,5 @@
-# Front-end-Frameworks-CA
+# Getting Started with Create React App
 
-design file: [figma](https://www.figma.com/file/m9S8hxGnIdf7Gbrb8dATun/Untitled?type=design&mode=design&t=xsixxSvoVCyqBcIi-0F)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

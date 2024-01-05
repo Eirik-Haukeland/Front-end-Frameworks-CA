@@ -1,0 +1,13 @@
+/**:has(.mainDef) {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+.mainDef {
+    margin: 64px 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2.5rem;
+    padding-block: .75rem;
+
+    background-color: #05BDE5;
+    color: #FFFFFF;
+}
+
+.store_name {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu_container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1.5rem;
+    color: inherit;
+}
+
+.cart {
+    position: relative;
+    display: flex;
+}
+
+.cart > img {
+    height: 2.25rem;
+    width: auto;
+    filter: invert(100%);
+}
+
+.cart > img:hover {
+    filter: invert(90%)
+}
+
+.cart > span:not([hidden]) {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -.75rem;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: .5rem;
+    font-size: 1.25rem;
+}
+
+.menu_container > menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_container a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.menu_container a:hover {
+    color: #ddd
+}
+
+.logo {
+    height: 5rem;
+}
