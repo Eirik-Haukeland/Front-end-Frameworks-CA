@@ -1,0 +1,17 @@
+.button {
+  display: grid;
+  place-items: center;
+  background-color: #38D7FA;
+  text-decoration: none;
+  padding-block: 15px;
+  padding-inline: 10px;
+
+  font-size: 1.25rem;
+
+  border-radius: 1.75rem;
+}
+
+.button:focus-visible,
+.button:hover {
+  background-color: #05BDE5;
+}
