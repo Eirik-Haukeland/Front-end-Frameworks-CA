@@ -1,4 +1,3 @@
-import './App.css';
 import Layout from "./compontents/Layout/index.jsx";
 import {Route, Routes} from "react-router-dom";
 import Cart from "./pages/cart/Cart.jsx";
