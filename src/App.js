@@ -8,6 +8,11 @@ import Product from "./pages/product/Product.jsx";
 import CheckoutSuccessPage from "./pages/checkoutSuccessPage/CheckoutSuccessPage.jsx";
 
 export default function App() {
+  window.addEventListener('resize', function(event){
+    console.log("window width: " , window.innerWidth);
+    console.log("window height: " , window.innerHeight);
+  });
+
   return (
     <Layout>
         <Routes>

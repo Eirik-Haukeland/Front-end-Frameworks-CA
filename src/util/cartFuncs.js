@@ -6,9 +6,6 @@ const cartName = "cart"
  * @throws missing argument
  */
 export const addItemsToCart = (itemId) => {
-
-  console.log(typeof itemId, itemId)
-
   if (itemId === undefined) {
     throw new Error('Missing item id')
   }
@@ -99,4 +96,8 @@ export const removeItemFromCart = (itemId) => {
   newItemsList.delete(itemId);
 
   localStorage.setItem(cartName, JSON.stringify([...newItemsList]));
+}
+
+export const removeAllItemsFromCart = () => {
+  localStorage.setItem(cartName, JSON.stringify([]));
 }
