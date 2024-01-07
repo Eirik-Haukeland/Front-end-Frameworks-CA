@@ -3,15 +3,33 @@
   place-items: center;
   background-color: #38D7FA;
   text-decoration: none;
-  padding-block: 15px;
-  padding-inline: 10px;
+  cursor: pointer;
 
+  width: 180px;
+  height: 58px;
   font-size: 1.25rem;
 
   border-radius: 1.75rem;
+
+  color: black;
+  text-decoration: none;
 }
 
 .button:focus-visible,
 .button:hover {
   background-color: #05BDE5;
+}
+
+.button[Secondary="true"] {
+  background-color: #d9d9d9;
+}
+
+.button[Secondary="true"]:focus-visible,
+.button[Secondary="true"]:hover {
+  background-color: #bfbfbf;
+}
+
+.button[smallbtn="true"] {
+  height: 29px;
+  width: 120px;
 }

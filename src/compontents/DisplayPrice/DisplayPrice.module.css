@@ -1,11 +1,13 @@
 .price {
   display: flex;
   flex-direction: column;
+  width: min-content;
 }
 
 .mainPrice {
   font-size: 1.25rem;
   font-weight: 700;
+  text-wrap: nowrap;
 }
 
 .discounted {

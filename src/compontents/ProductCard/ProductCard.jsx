@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import cardCss from "./ProductCard.module.css"
 import Button from "../Button/Button.jsx"
+import { isItemInCart } from "../../util/cartFuncs.js";
 
 export default function ProductCard (props) {
   const {id, title, imageUrl, price, discountedPrice} = props
@@ -13,7 +14,7 @@ export default function ProductCard (props) {
         ? <span className={cardCss.price} data-discounted="true">{discountedPrice} Kr</span>
         : <span className={cardCss.price}>{price} Kr</span>
       }
-      <Button>View Product</Button>
+      <Button className={cardCss.btn}>View Product</Button>
     </Link>
     )
 }
