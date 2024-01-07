@@ -1,7 +1,7 @@
 import dispalyPriceCss from "./DisplayPrice.module.css"
 
 export default function DisplayPrice ({discountedPrice, price}) {
-	if (discountedPrice !== price) {
+	if (discountedPrice !== price && typeof discountedPrice !== "undefined") {
 		const discountPercentage = Math.floor((price - discountedPrice) / price * 100);
 
 		return (

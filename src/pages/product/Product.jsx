@@ -5,7 +5,7 @@ import DisplayPrice from "../../compontents/DisplayPrice/DisplayPrice.jsx"
 import productCss from "./Product.module.css";
 import Button from "../../compontents/Button/Button.jsx";
 import RevueCard from "../../compontents/RevueCard/RevueCard.jsx";
-import { addItemsToCart, isItemInCart } from "../../util/cartFuncs.js";
+import { addItemsToCart, isItemInCart, removeItemFromCart } from "../../util/cartFuncs.js";
 
 export default function Product () {
 	const {productId} = useParams()
@@ -29,7 +29,7 @@ export default function Product () {
 					</div>
 					<div className={productCss.price_and_btn}>
 						<DisplayPrice price={product.price} discountedPrice={product.discountedPrice} />
-						<Button onEventFunction={() => {addItemsToCart(product.id); setIsInCart(isItemInCart(product.id));}} disabled={isInCart}>Add To Cart</Button>
+						<Button onEventFunction={() => {isInCart ? removeItemFromCart(product.id) : addItemsToCart(product.id); setIsInCart(isItemInCart(product.id));}} secondary={isInCart}>{isInCart ? "Remove" : "Add To Cart"}</Button>
 					</div>
 				</div>
 			</seciton>

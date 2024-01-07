@@ -80,3 +80,23 @@ export const isItemInCart = (itemId) => {
 
  return new Set (JSON.parse(itemsInCart)).has(itemId);
 }
+
+/**
+ * @param {string} itemId - id for the product
+ * @throws {InvalidArgumentException} argument not a string
+ * @throws missing argument
+ */
+export const removeItemFromCart = (itemId) => {
+  if (itemId === undefined) {
+    throw new Error('Missing item id')
+  }
+  if (typeof itemId !== 'string') {
+    throw new Error('Parameter is not a string!')
+  }
+
+  const itemsInCart = JSON.parse(localStorage.getItem(cartName));
+  const newItemsList = new Set (itemsInCart)
+  newItemsList.delete(itemId);
+
+  localStorage.setItem(cartName, JSON.stringify([...newItemsList]));
+}

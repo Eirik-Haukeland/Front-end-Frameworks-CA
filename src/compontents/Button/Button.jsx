@@ -1,9 +1,11 @@
 import buttonCss from "./Button.module.css"
 
-export default function Button ({children, onEventFunction, className, disabled}) {
+export default function Button ({children, onEventFunction, className, secondary, smallBtn}) {
 
-  const isTabIndex = typeof onEventFunction === 'function' && disabled === false ? {tabIndex: 0} : {}
+  const isTabIndex = typeof onEventFunction === 'function' ? {tabIndex: 0} : {}
   const isClassName = typeof className !== 'undefined'
+  const isSmall = typeof smallBtn !== 'undefined' && smallBtn === true ? {smallbtn: "true"} : {smallbtn: "false"}
+  const isSecondary = typeof secondary !== 'undefined' && secondary === true ? {secondary: "true"} : {secondary: "false"}
 
   return (
     <span 
@@ -11,7 +13,8 @@ export default function Button ({children, onEventFunction, className, disabled}
       onKeyDown={(e) => e.code === "Enter" && onEventFunction()}
       {...isTabIndex}
       className={`${buttonCss.button} ${isClassName && className}`} 
-      disabled={disabled}
+      {...isSmall}
+      {...isSecondary}
     >{children}</span>
   )
 }
