@@ -5,8 +5,6 @@ import cartCss from "./Cart.module.css"
 import { getListedProducts } from "../../util/api"
 import Button from "../../compontents/Button/Button"
 import DisplayPrice from "../../compontents/DisplayPrice/DisplayPrice"
-import { type } from "@testing-library/user-event/dist/type"
-import Product from "../product/Product"
 import { Link } from "react-router-dom"
 
 

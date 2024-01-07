@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useRef, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {getAllProducts} from "../../util/api.js";
 import ProductCard from "../../compontents/ProductCard/ProductCard.jsx";
 import homeCss from "./Home.module.css"
