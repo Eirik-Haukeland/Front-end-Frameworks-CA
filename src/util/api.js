@@ -29,3 +29,26 @@ export const getListedProducts = async (productIds) => {
 
   return fetches
 }
+
+/**
+ * @param {object} productIds
+ * @returns Promise<Array<object>>
+ */
+export const sendMessage = async (fullName, subject, emailAddr, message) => {
+
+  const body = JSON.stringify({fullName, subject, emailAddr, message})
+
+  console.log(body, 'test')
+
+  /* 
+  const response = await fetch(baseUrl, {
+    method: 'POST',
+    body
+  })
+
+
+  if (response.ok) {
+    return await response.json()
+  }
+  */
+}

@@ -1,0 +1,80 @@
+.contactSection,
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactSection {
+  gap: 1rem;
+}
+
+.input > :nth-child(2){
+  border: 2px solid black;
+}
+
+.contactForm {
+  display: grid;
+  gap: 2rem;
+  width: 1000px;
+  grid-template: 
+    "fullName message"
+    "emailAddr message"
+    "subject message"
+    "btn ."
+    / 1fr 2fr;
+}
+
+.contactName {
+  grid-area: fullName;
+}
+
+.contactEmail {
+  grid-area: emailAddr;
+}
+
+.contactSubject {
+  grid-area: subject;
+}
+
+.contactMessage {
+  grid-area: message;
+}
+
+.contactMessage > textarea {
+  resize: none;
+  height: 100%;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.contactBtn {
+  grid-area: btn;
+}
+
+@media screen and (max-width: 1000px) {
+  .contactForm {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contactSection {
+    width: 90%;
+  }
+
+  .contactForm {
+    width: 100%;
+    grid-template: 
+    "fullName"
+    "emailAddr"
+    "subject"
+    "message"
+    "btn";
+  }
+
+  .contactMessage > div {
+    height: 15rem;
+  }
+}

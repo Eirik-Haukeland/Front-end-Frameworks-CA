@@ -1,6 +1,6 @@
 import buttonCss from "./Button.module.css"
 
-export default function Button ({children, onEventFunction, className, secondary, smallBtn}) {
+export default function Button ({children, onEventFunction, className, secondary, smallBtn, type}) {
 
   const isTabIndex = typeof onEventFunction === 'function' ? {tabIndex: 0} : {}
   const isClassName = typeof className !== 'undefined'
@@ -8,13 +8,23 @@ export default function Button ({children, onEventFunction, className, secondary
   const isSecondary = typeof secondary !== 'undefined' && secondary === true ? {secondary: "true"} : {secondary: "false"}
 
   return (
-    <span 
-      onClick={onEventFunction} 
-      onKeyDown={(e) => e.code === "Enter" && onEventFunction()}
-      {...isTabIndex}
-      className={`${buttonCss.button} ${isClassName && className}`} 
-      {...isSmall}
-      {...isSecondary}
-    >{children}</span>
+    <>
+    {
+      typeof type !== 'undefined' && type !== "span" 
+        ? <button 
+            className={`${buttonCss.button} ${isClassName && className}`} 
+            {...isSmall}
+            {...isSecondary}
+          >{children}</button>
+      : <span 
+          onClick={onEventFunction} 
+          onKeyDown={(e) => e.code === "Enter" && onEventFunction()}
+          {...isTabIndex}
+          className={`${buttonCss.button} ${isClassName && className}`} 
+          {...isSmall}
+          {...isSecondary}
+        >{children}</span>
+    }
+    </>
   )
 }

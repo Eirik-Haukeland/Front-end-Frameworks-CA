@@ -14,6 +14,7 @@ export default function Header () {
         <img alt="Cart" src={cart}/>
         <span hidden={itemsInCart <= 0}>{itemsInCart}</span>
       </Link>
+      
       <menu>
         <li>
           <Link to="/">Home</Link>
