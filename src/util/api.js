@@ -1,5 +1,3 @@
-import {useEffect, useState} from "react";
-
 const baseUrl = "https://api.noroff.dev/api/v1/online-shop"
 //TODO type def for a product: "https://api.noroff.dev/api/v1/online-shop"
 

@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 import cardCss from "./ProductCard.module.css"
 import Button from "../Button/Button.jsx"
-import { isItemInCart } from "../../util/cartFuncs.js";
 
 export default function ProductCard (props) {
   const {id, title, imageUrl, price, discountedPrice} = props
