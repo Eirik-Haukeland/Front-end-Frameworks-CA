@@ -13,11 +13,14 @@ export default function Product () {
 	let [product, setProduct] = useState({})
 	let [isInCart, setIsInCart] = useState(false)
 	useEffect(() => {
-		getSingleProduct(productId).then(setProduct)
-		setIsInCart(isItemInCart(productId))
+		try {
+			getSingleProduct(productId).then(setProduct);
+			setIsInCart(isItemInCart(productId));
+		} catch (error) {
+			console.error(error)
+		}
 	}, []);
 	
-
 	return (
 		<>
 			<seciton className={productCss.productSection}>
@@ -28,8 +31,14 @@ export default function Product () {
 						<p className={productCss.description}>{product.description}</p>
 					</div>
 					<div className={productCss.price_and_btn}>
-						<DisplayPrice price={product.price} discountedPrice={product.discountedPrice} />
-						<Button onEventFunction={() => {isInCart ? removeItemFromCart(product.id) : addItemsToCart(product.id); setIsInCart(isItemInCart(product.id));}} secondary={isInCart}>{isInCart ? "Remove" : "Add To Cart"}</Button>
+						<DisplayPrice 
+							price={product.price} 
+							discountedPrice={product.discountedPrice} 
+						/>
+						<Button 
+							onEventFunction={() => {isInCart ? removeItemFromCart(product.id) : addItemsToCart(product.id); setIsInCart(isItemInCart(product.id));}} 
+							secondary={isInCart}
+						>{isInCart ? "Remove" : "Add To Cart"}</Button>
 					</div>
 				</div>
 			</seciton>
