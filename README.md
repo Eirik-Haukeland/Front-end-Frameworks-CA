@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+[![image of site running](./img_of_site_running_2024_03_09.png)](https://main--astounding-kleicha-407922.netlify.app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 [link to designe](https://www.figma.com/file/m9S8hxGnIdf7Gbrb8dATun/Untitled?type=design&node-id=28%3A3235&mode=design&t=MXc8ueiGamIdM2cU-1)
