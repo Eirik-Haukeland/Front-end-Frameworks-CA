@@ -14,7 +14,11 @@ this is an implementation of a shoppingsite using one of noroffs api. it allow y
 
 [link to designe](https://www.figma.com/file/m9S8hxGnIdf7Gbrb8dATun/Untitled?type=design&node-id=28%3A3235&mode=design&t=MXc8ueiGamIdM2cU-1)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## built with
+
+- [Create React App](https://github.com/facebook/create-react-app).
+- [react.js](https://react.dev/)
+- [react-router-dom](https://reactrouter.com/en/main)
 
 ## Available Scripts
 
