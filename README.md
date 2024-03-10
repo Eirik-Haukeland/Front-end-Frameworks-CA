@@ -55,3 +55,6 @@ npm test
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+## Contributing
+
+this project is not beeing activly developped, but if you want to suggest canges please open an issue where you describe the problem you want to solve and the proposed sulution. submitt the changes to a pr and link the pr to the issue
